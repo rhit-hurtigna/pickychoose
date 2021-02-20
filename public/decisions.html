@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title id="mainTitle">Loading...</title>
+</head>
+
+
+<div hidden class="card" id="_o6F9N5ZPIwZ1jy5IOlLy">
+  <div class="card-body row no-gutters">
+    <div data-toggle="modal" data-target="#updateRankModal" class="col-8 clickable align-items-center changeRank"
+      style="display: flex">
+      <h5 class="rank no-margin">4</h5>
+      <h5 class="card-title no-margin">Nathan's idea</h5>
+    </div>
+    <div class="btn-container col-4">
+      <btn data-toggle="modal" data-target="#editOptionModal" hidden
+        class="clickable editOption btn-restricted _nathan@hurtigtech.com _nathan@hurtigtech.com _test123@abc.com btn-right">
+        i class="material-icons">edit</i>
+      </btn>
+      <btn type="button" class="downButton btn-right"><i class="material-icons dark-gray">expand_more</i></btn>
+      <btn type="button" class="upButton btn-right"><i class="material-icons dark-gray">expand_less</i></btn>
+    </div>
+  </div>
+</div>
+
+
+
+
+<body>
+  <nav class="navbar navbar-dark primary fixed-top">
+    <a class="navbar-brand" id="leftTitle" href="/groups.html">Loading...</a>
+    <div>
+      <a href="/groups.html">
+        <button class="btn bmd-btn-icon" type="button" id="back">
+          <i class="material-icons">arrow_back</i>
+        </button>
+      </a>
+      <button class="btn bmd-btn-icon navbar-toggler" data-toggle="drawer" data-target="#menuDrawer" type="button">
+        <i class="material-icons">menu</i>
+      </button>
+    </div>
+  </nav>
+  <div id="decisionsContainer" class="pc-container">
+    <div class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
+      <div id="menuDrawer" class="bmd-layout-drawer bg-faded">
+      </div>
+      <main class="bmd-layout-content pc-content">
+        <div id="decisionCardContainer" class="container">
+          <h2 class="background-text">Loading...</h2>
+        </div>
+      </main>
+    </div>
+  </div>
+  <button type="button" id="createDecisionButton" class="btn bmd-btn-fab secondary" data-toggle="modal"
+    data-target="#createDecisionModal"><i class="material-icons">add</i></button>
+  <!-- CreateModal -->
+  <div class="modal fade" id="createDecisionModal" tabindex="-1" role="dialog"
+    aria-labelledby="createDecisionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="createDecisionModalLabel">Create New Decision</h5>
+        </div>
+        <div class="modal-body">
+          <div class="form-group bmd-form-group">
+            <label for="decisionCreateName" required>Decision Name</label>
+            <input type="text" class="form-control" id="decisionCreateName">
+            <span class="bmd-help">e.g. Dinner</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          <button type="button" id="submitCreateDecision" data-dismiss="modal" class="btn btn-primary"
+            style="color: #2BBBB4">CREATE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- EditModal -->
+  <div class="modal fade" id="editDecisionModal" tabindex="-1" role="dialog" aria-labelledby="editDecisionModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editDecisionModalLabel">Edit Decision</h5>
+        </div>
+        <div class="modal-body">
+          <div class="form-group bmd-form-group">
+            <label for="decisionEditName" required>New Decision Name</label>
+            <input type="text" class="form-control" id="decisionEditName">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div data-dismiss="modal" data-toggle="modal" data-target="#deleteDecisionModal" style="margin-right: auto;">
+            <i class="material-icons" style="color: #333333">delete</i></div>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          <button type="button" id="submitEditDecision" data-dismiss="modal" class="btn btn-primary"
+            style="color: #2BBBB4">SUBMIT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- DeleteDecisionModal -->
+  <div class="modal fade" id="deleteDecisionModal" tabindex="-1" role="dialog"
+    aria-labelledby="deleteDecisionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteDecisionModalLabel">Delete Decision</h5>
+        </div>
+        <div class="modal-body">
+          <div>Are you sure?
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal"
+            data-target="#editDecisionModal">CANCEL</button>
+          <button type="button" id="submitDeleteDecision" data-dismiss="modal" class="btn btn-primary"
+            style="color: #2BBBB4">DELETE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- LeaveGroupModal -->
+  <div class="modal fade" id="leaveGroupModal" tabindex="-1" role="dialog" aria-labelledby="leaveGroupModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="leaveGroupModalLabel">Leave Group</h5>
+        </div>
+        <div class="modal-body">
+          <div>Are you sure?
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          <button type="button" id="submitLeaveGroup" data-dismiss="modal" class="btn btn-primary"
+            style="color: #2BBBB4">LEAVE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- DeleteGroupModal -->
+  <div class="modal fade" id="deleteGroupModal" tabindex="-1" role="dialog" aria-labelledby="deleteGroupModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteGroupModalLabel">Delete Group</h5>
+        </div>
+        <div class="modal-body">
+          <div>Are you sure?
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          <button type="button" id="submitDeleteGroup" data-dismiss="modal" class="btn btn-primary"
+            style="color: #2BBBB4">DELETE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>
+    $("body").bootstrapMaterialDesign();
+  </script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

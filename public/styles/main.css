@@ -1,0 +1,293 @@
+body {
+    background: #DDDDDD;
+}
+
+.primary {
+    background-color: #C29670;
+}
+
+.secondary {
+    background-color: #2BBBB4 !important;
+}
+
+.bmd-btn-fab .material-icons {
+    color: #666666;
+}
+
+.input-col {
+    margin: auto;
+}
+
+.plain-input {
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 30px;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.plain-input:focus {
+    outline: none;
+}
+
+/* From https://css-tricks.com/almanac/selectors/p/placeholder/ */
+.plain-input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 1em !important;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 1em !important;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 1em !important;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 1em !important;
+}
+
+.inputContainer {
+    padding: 0px;
+    width: 85%;
+    margin: 30px auto;
+    max-width: 450px;
+}
+
+.pc-btn,
+.pc-btn:active {
+    background-color: #2BBBB4 !important;
+    width: 100%;
+    font-size: 1.45em;
+    font-weight: 400;
+    text-transform: none;
+    font-family: inherit;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#logo {
+    display: block;
+    margin: auto;
+    width: 80%;
+    max-width: 450px;
+}
+
+#formContainer {
+    background-color: white;
+    margin: auto;
+    width: 85%;
+    max-width: 450px;
+}
+
+#rankRow {
+    line-height: 50px;
+    font-size: 1.2em;
+    font-weight: 450;
+    border-bottom: solid 2px #666666;
+}
+
+#rankRow>.col>div {
+    text-align: center;
+}
+
+#personalRank {
+    border-right: solid 1px #666666;
+}
+
+#groupRank {
+    border-left: solid 1px #666666;
+}
+
+.material-icons {
+    color: white;
+}
+
+.background-text {
+    color: #666666;
+    font-weight: 500;
+    padding: 15px 10px;
+}
+
+.bmd-layout-container {
+    height: 100%;
+}
+
+.pc-container {
+    margin-top: 56px;
+}
+
+.pc-content {
+    height: calc(100vh - 56px);
+}
+
+.bmd-btn-fab {
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    color: #666666;
+    z-index: 500;
+}
+
+.bmd-layout-drawer {
+    z-index: 999;
+}
+
+.bmd-btn-fab:active {
+    transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+    opacity: .8;
+}
+
+#searchGroupButton {
+    right: 85px;
+}
+
+/* from https://stackoverflow.com/questions/56026043/how-to-prevent-chrome-from-changing-font-when-autofilling-username-password/56026254
+*:-webkit-autofill::first-line,
+*:-webkit-autofill,
+*:-webkit-autofill:hover,
+*:-webkit-autofill:focus,
+*:-webkit-autofill:active {
+    font-size: 30px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+} */
+
+/* from https://stackoverflow.com/questions/30495058/bootstrap-div-stretch-to-bottom-of-page/30495574 */
+.fill {
+    height: 100vh;
+    min-height: 100%;
+}
+
+.card {
+    background-color: inherit;
+    border-bottom: solid 2px #6c757d;
+    box-shadow: none;
+}
+
+.menuCard {
+    flex: 0 1 auto;
+    border-bottom: solid 2px #97a3ad;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+#menuDrawer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.card-body {
+    padding: 12px;
+    padding-right: 0px;
+}
+
+.card-subtitle {
+    display: block;
+}
+
+.dot-dot-dot {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#back {
+    padding-right: 25px
+}
+
+.card-title {
+    font-weight: 500 !important;
+    font-size: 0.75em;
+    color: #444444;
+}
+
+.card-subtitle {
+    padding-left: 20px;
+    margin-bottom: 0px !important;
+    font-weight: 400;
+}
+
+.clickable {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.btn-right {
+    padding: 0px 7px;
+    flex: 0 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.menuCard h5 {
+    padding-left: 4px;
+}
+
+.material-icons {
+    cursor: pointer;
+}
+
+.btn-right>.material-icons {
+    color: #555555;
+}
+
+.dark-gray {
+    color: #555555
+}
+
+.card-title {
+    margin-bottom: 0.5rem;
+}
+
+.no-margin {
+    margin: 0px;
+}
+
+.rank {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    background-color: #555555;
+    color: #DDDDDD;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    margin-right: 12px
+}
+
+.square-modal {
+    width: 300px;
+    margin: auto;
+}

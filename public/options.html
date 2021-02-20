@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title id="mainTitle">Loading...</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark primary fixed-top">
+    <a class="navbar-brand" id="leftTitle" href="#">Loading...</a>
+    <div>
+      <a id="backButton" href="#">
+        <button class="btn bmd-btn-icon" type="button" id="back">
+          <i class="material-icons">arrow_back</i>
+        </button>
+      </a>
+      <button class="btn bmd-btn-icon navbar-toggler" data-toggle="drawer" data-target="#menuDrawer" type="button">
+        <i class="material-icons">menu</i>
+      </button>
+    </div>
+  </nav>
+  <div class="pc-container">
+    <div id="optionsContainer">
+      <div class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
+        <div id="menuDrawer" class="bmd-layout-drawer bg-faded">
+        </div>
+        <main class="bmd-layout-content pc-content">
+          <div class="row no-gutters" id="rankRow">
+            <div class="col clickable secondary" id="personalRank">
+              <div>Personal</div>
+            </div>
+            <div class="col clickable" id="groupRank">
+              <div>Group</div>
+            </div>
+          </div>
+          <div class="container" id="optionCardContainer">
+            <h2 class="background-text">Loading...</h2>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+  <button type="button" id="addOptionButton" class="btn bmd-btn-fab secondary" data-toggle="modal"
+    data-target="#createOptionModal"><i class="material-icons">add</i></button>
+  <!-- CreateModal -->
+  <div class="modal fade" id="createOptionModal" role="dialog" aria-labelledby="createOptionModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="createOptionModalLabel">Create New Option</h5>
+        </div>
+        <div class="modal-body">
+          <div class="form-group bmd-form-group">
+            <label for="OptionCreateName" required>Option Name</label>
+            <input type="text" class="form-control" id="optionCreateName">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          <button type="button" id="submitCreateOption" data-dismiss="modal" class="btn btn-primary"
+            style="color: #2BBBB4">CREATE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- EditModal -->
+  <div class="modal fade" id="editOptionModal" role="dialog" aria-labelledby="editOptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editOptionModalLabel">Edit Option</h5>
+        </div>
+        <div class="modal-body">
+          <div class="form-group bmd-form-group">
+            <label for="optionEditName" required>New Option Name</label>
+            <input type="text" class="form-control" id="optionEditName">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div data-dismiss="modal" data-toggle="modal" data-target="#deleteOptionModal" style="margin-right: auto;">
+            <i class="material-icons" style="color: #333333">delete</i></div>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          <button type="button" id="submitEditOption" data-dismiss="modal" class="btn btn-primary"
+            style="color: #2BBBB4">SUBMIT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- DeleteOptionModal -->
+  <div class="modal fade" id="deleteOptionModal" role="dialog" aria-labelledby="deleteOptionModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteOptionModalLabel">Delete Option</h5>
+        </div>
+        <div class="modal-body">
+          <div>Are you sure?
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal"
+            data-target="#editOptionModal">CANCEL</button>
+          <button type="button" id="submitDeleteOption" data-dismiss="modal" class="btn btn-primary"
+            style="color: #2BBBB4">DELETE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- UpdateRankModal -->
+  <div class="modal fade" id="updateRankModal" role="dialog" aria-labelledby="updateRankModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered square-modal" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updateRankModalLabel">Set Rank</h5>
+        </div>
+        <div class="modal-body">
+          <div class="form-group bmd-form-group">
+            <label for="updateRankName" required>Rank</label>
+            <input type="number" class="form-control" id="updateRankName" min="1">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div data-dismiss="modal" data-toggle="modal" data-target="#deleteOptionModal" style="margin-right: auto;">
+            <i class="material-icons" style="color: #333333">delete</i></div>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          <button type="button" id="submitUpdateRank" data-dismiss="modal" class="btn btn-primary"
+            style="color: #2BBBB4">SUBMIT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- DeleteGroupModal -->
+  <div class="modal fade" id="deleteGroupModal" tabindex="-1" role="dialog" aria-labelledby="deleteGroupModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteGroupModalLabel">Delete Group</h5>
+        </div>
+        <div class="modal-body">
+          <div>Are you sure?
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          <button type="button" id="submitDeleteGroup" data-dismiss="modal" class="btn btn-primary"
+            style="color: #2BBBB4">DELETE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>
+    $("body").bootstrapMaterialDesign();
+  </script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

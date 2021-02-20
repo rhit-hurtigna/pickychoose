@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Groups</title>
+</head>
+
+<body id="mainPageBody">
+  <nav class="navbar navbar-dark primary fixed-top">
+    <a class="navbar-brand" href="#">Groups</a>
+    <button class="btn bmd-btn-icon navbar-toggler" data-toggle="drawer" data-target="#menuDrawer" type="button">
+      <i class="material-icons">menu</i>
+    </button>
+  </nav>
+  <div id="groupsContainer" class="pc-container">
+    <div class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
+      <div id="menuDrawer" class="bmd-layout-drawer row bg-faded">
+      </div>
+      <main class="bmd-layout-content pc-content">
+        <div class="container" id="groupCardContainer">
+          <h2 class="background-text">Loading...</h2>
+        </div>
+      </main>
+    </div>
+  </div>
+  <button type="button" id="addGroupButton" class="btn bmd-btn-fab secondary" data-toggle="modal"
+    data-target="#createGroupModal"><i class="material-icons">add</i></button>
+  <!-- CreateModal -->
+  <div class="modal fade" id="createGroupModal" tabindex="-1" role="dialog" aria-labelledby="createGroupModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="createGroupModalLabel">Create New Group</h5>
+        </div>
+        <div class="modal-body">
+          <div class="form-group bmd-form-group">
+            <label for="groupCreateName" required>Group Name</label>
+            <input type="text" class="form-control" id="groupCreateName">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          <button type="button" id="submitCreateGroup" data-dismiss="modal" class="btn btn-primary"
+            style="color: #2BBBB4">CREATE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- EditModal -->
+  <div class="modal fade" id="editGroupModal" tabindex="-1" role="dialog" aria-labelledby="editGroupModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editGroupModalLabel">Edit Group</h5>
+        </div>
+        <div class="modal-body">
+          <div class="form-group bmd-form-group">
+            <label for="groupEditName" required>New Group Name</label>
+            <input type="text" class="form-control" id="groupEditName">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          <button type="button" id="submitEditGroup" data-dismiss="modal" class="btn btn-primary"
+            style="color: #2BBBB4">SUBMIT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- InviteModal -->
+  <div class="modal fade" id="inviteMemberModal" tabindex="-1" role="dialog" aria-labelledby="inviteMemberModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="inviteMemberModalLabel">Invite New Member</h5>
+        </div>
+        <div class="modal-body">
+          <div class="form-group bmd-form-group">
+            <label for="inviteMemberName" required>Member's Email</label>
+            <input type="text" class="form-control" id="inviteMemberName">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+          <button type="button" id="submitInviteMember" data-dismiss="modal" class="btn btn-primary"
+            style="color: #2BBBB4">INVITE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>
+    $("body").bootstrapMaterialDesign();
+  </script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

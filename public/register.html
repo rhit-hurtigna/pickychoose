@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="styles/bootstrap-material-design.min.css">
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+  <link rel="stylesheet" href="styles/main.css">
+  <title>PickyChoose</title>
+</head>
+
+<body class="primary">
+  <div id="registerPageContainer">
+    <img src="img/pickychooseMaiandra_GD_Title.png" alt="PickyChoose Logo" id="logo">
+    <div class="bmd-form-group justify-content-center inputContainer">
+      <input type="text" class="plain-input" placeholder="Display Name" id="registerDisplayName">
+      <input type="text" class="plain-input" placeholder="Email" id="registerEmail">
+      <input type="password" class="plain-input" placeholder="Password" id="registerPassword">
+      <div class="row" style="margin-top: 20px">
+        <div class="col-6">
+          <button type="button" class="btn btn-raised pc-btn" id="backButton">Back</button>
+        </div>
+        <div class="col-6">
+          <button type="button" class="btn btn-raised pc-btn" id="registerButton">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/popper.js"></script>
+  <script src="scripts/bootstrap-material-design.js"></script>
+  <script>
+    $("body").bootstrapMaterialDesign();
+  </script>
+  <script src="/__/firebase/7.18.0/firebase-app.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-analytics.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+  <script src="/__/firebase/7.18.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
